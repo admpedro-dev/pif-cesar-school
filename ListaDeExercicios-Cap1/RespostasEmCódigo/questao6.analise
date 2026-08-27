@@ -1,0 +1,49 @@
+Erros:
+ 
+1 - FALTA TIPO DE RETORNO
+Linha 1: main()
+Problema: main() não retorna nenhum tipo
+Correto: int main()
+Tipo: Erro de Sintaxe
+ 
+2 - FALTA DIRETIVAS #include
+Linhas que usam printf e system
+Problema: Faltam #include <stdio.h> e #include <stdlib.h>
+Correto: Adicionar no início:
+         #include <stdio.h>
+         #include <stdlib.h>
+
+3 - OPERADOR INCORRETO
+Linha 3: int a=1; b=2; c=3:
+Problema: Últimas variáveis (b e c) não têm tipo "int" redeclarado
+          Dois-pontos (:) no final ao invés de ponto-e-vírgula (;)
+Correto: int a=1, b=2, c=3;
+         ou
+         int a=1;
+         int b=2;
+         int c=3;
+
+4 - ASPAS FALTANDO
+Linha 4: printf("0s números são: %d%d%d\n, a, b, c, d);
+Problema: String não termina com aspas de fechamento
+          Tem aspas abertas em "0s números são: %d%d%d\n, a, b, c, d)
+Correto: printf("Os números são: %d %d %d\n", a, b, c);
+ 
+5 - VARIÁVEL NÃO DECLARADA
+Linha 4: printf("Os números são: %d%d%d\n", a, b, c, d);
+Problema: Variável 'd' não foi declarada/inicializada
+          printf tenta imprimir 4 valores (%d aparece 3 vezes) mas passa 4 argumentos
+Correto: Remover 'd' do printf
+         printf("Os números são: %d %d %d\n", a, b, c);
+ 
+6 - CARACTERE ERRADO NO INÍCIO DA STRING (LÓGICA)
+Linha 4: printf("0s números são: ...)
+Problema: "0s" (zero erre) ao invés de "Os" (letra ó ou O)
+Correto: printf("Os números são: %d %d %d\n", a, b, c);
+Tipo: Erro de Lógica (output errado)
+ 
+7 - FALTA RETURN
+Ao final de main()
+Problema: main() deve retornar int mas não há return 0;
+Correto: Adicionar return 0; antes de fechra a chave
+Tipo: Erro de Sintaxe (ANSI C rigoroso)
