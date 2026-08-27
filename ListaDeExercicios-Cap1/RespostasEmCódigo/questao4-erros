@@ -1,0 +1,23 @@
+1. LINHA 2: #include <stdlib.h>;
+   ERRO: Ponto-e-vírgula desnecessário
+   CORRETO: #include <stdlib.h>
+   
+2. LINHA 3: int Main{}
+   ERRO: Falta de nome de função após "int". "Main" deve ser "main"
+   ERRO: Chaves {} após o tipo retorno. Sintaxe incorreta.
+   CORRETO: int main()
+   
+3. LINHA 4: (
+   ERRO: Parêntese aberta sozinha. A abertura da função deve estar junto a "main()"
+   
+4. LINHA 5: printf( Existem %d semanas no ano.,52);
+   ERRO: String sem aspas. "Existem %d semanas no ano." deve estar entre aspas
+   CORRETO: printf("Existem %d semanas no ano.", 52);
+   
+5. LINHA 6: cout << endl;
+   ERRO: Sintaxe de C++, não de C. C não tem "cout" nem "<<" nem "endl"
+   SOLUÇÃO: Remover esta linha ou substituir por: printf("\n");
+   
+6. LINHA 9: )
+   ERRO: Fecho de parêntese sozinho. As chaves {} devem envolver o corpo da função
+   CORRETO: }
