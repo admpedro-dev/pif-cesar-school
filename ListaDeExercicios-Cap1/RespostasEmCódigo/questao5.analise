@@ -1,0 +1,27 @@
+RESPOSTA: NÃO, o programa NÃO está correto para compilação e execução conforme 
+o padrão ANSI C.
+
+Oq falta:
+  
+1. DIRETIVA #include <stdio.h>
+   FALTA: Protótipo da função printf()
+   IMPACTO: O compilador não reconhecerá printf() e gerará erro
+   NECESSÁRIO: #include <stdio.h> no início do arquivo
+ 
+2. DIRETIVA #include <stdlib.h>
+   FALTA: Protótipo da função system()
+   IMPACTO: O compilador não reconhecerá system() e gerará erro
+   NECESSÁRIO: #include <stdlib.h> no início do arquivo
+ 
+3. TIPO DE RETORNO EM main()
+   FALTA: Tipo de retorno (int)
+   CÓDIGO: main()
+   CORRETO: int main()
+   IMPACTO: Não segue o padrão ANSI C. Compiladores modernos podem recusar
+            ou gerar aviso
+   NECESSÁRIO: int main()
+ 
+4. INSTRUÇÃO return
+   FALTA: return 0; no final de main()
+   IMPACTO: Não retorna status de saída
+   NECESSÁRIO: return 0; ou return EXIT_SUCCESS;
