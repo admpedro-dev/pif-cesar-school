@@ -1,1 +1,1 @@
-Respostas do capítulo 1 da matéria de Programação Imperativa Funcional
+Respostas dos exercícios de Programação Imperativa Funcional do Professor Danilo Farias.
